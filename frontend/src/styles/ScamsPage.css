@@ -1,0 +1,53 @@
+.scams-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.scams-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.scams-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.scams-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #667eea;
+}
+
+.no-results {
+  background: #f0f0f0;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 8px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .scams-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+}
