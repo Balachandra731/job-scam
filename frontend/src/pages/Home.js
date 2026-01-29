@@ -4,7 +4,7 @@ import { SearchBar } from '../components/SearchBar';
 import '../styles/Home.css';
 import { FiCheck, FiShield, FiUsers } from 'react-icons/fi';
 
-export const Home = () => {
+const HomeComponent = () => {
   return (
     <div className="home">
       <section className="hero">
@@ -66,3 +66,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export const Home = React.memo(HomeComponent);
