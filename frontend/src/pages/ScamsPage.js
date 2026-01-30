@@ -8,7 +8,6 @@ export const ScamsPage = () => {
   const [reports, setReports] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     fetchReports();

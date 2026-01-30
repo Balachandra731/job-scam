@@ -1,32 +1,27 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { Navbar } from './components/Navbar';
 import { ProtectedRoute, AdminRoute } from './components/ProtectedRoute';
 import { Home } from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import ScamsPage from './pages/ScamsPage';
+import ReportPage from './pages/ReportPage';
+import Dashboard from './pages/Dashboard';
+import AdminPanel from './pages/AdminPanel';
 import './App.css';
-
-// Lazy load heavy components for better initial load time
-const Login = lazy(() => import('./pages/Login'));
-const Register = lazy(() => import('./pages/Register'));
-const ScamsPage = lazy(() => import('./pages/ScamsPage'));
-const ReportPage = lazy(() => import('./pages/ReportPage'));
-const Dashboard = lazy(() => import('./pages/Dashboard'));
-const AdminPanel = lazy(() => import('./pages/AdminPanel'));
-
-const LoadingFallback = () => <div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>;
 
 function App() {
   return (
     <Router>
       <AuthProvider>
         <Navbar />
-        <Suspense fallback={<LoadingFallback />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/scams" element={<ScamsPage />} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/scams" element={<ScamsPage />} />
             
             <Route 
               path="/report" 
@@ -63,10 +58,9 @@ function App() {
                 </AdminRoute>
               } 
             />
-            
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </Suspense>
+          
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </AuthProvider>
     </Router>
   );
