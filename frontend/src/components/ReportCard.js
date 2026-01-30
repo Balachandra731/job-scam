@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/ReportCard.css';
-import { FiCheck, FiX } from 'react-icons/fi';
+import { FiCheck } from 'react-icons/fi';
 
 export const ReportCard = ({ report }) => {
   return (

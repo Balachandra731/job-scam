@@ -1,4 +1,21 @@
-# 🚨 Job Scam Detector - START HERE! 🚀
+job-scam-app/
+├── backend/                    (Express.js server)
+│   └── src/
+│       ├── models/            (User, Report schemas)
+│       ├── controllers/       (Auth, Report logic)
+│       ├── routes/            (API endpoints)
+│       ├── middleware/        (JWT auth)
+│       └── config/            (Database)
+│
+├── frontend/                   (React app)
+│   └── src/
+│       ├── pages/             (7 pages)
+│       ├── components/        (Navbar, etc.)
+│       ├── context/           (AuthContext)
+│       ├── services/          (API calls)
+│       └── styles/            (9 CSS files)
+│
+└── docs/                       (10 documentation files)# 🚨 Job Scam Detector - START HERE! 🚀
 
 ## ⚡ 3-Step Quick Start (5 minutes)
 

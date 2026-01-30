@@ -27,11 +27,6 @@ export const ScamsPage = () => {
     }
   };
 
-  const handleSearch = (company) => {
-    setSearchQuery(company);
-    fetchReports(company);
-  };
-
   return (
     <div className="scams-page">
       <div className="scams-header">
@@ -59,3 +54,5 @@ export const ScamsPage = () => {
     </div>
   );
 };
+
+export default ScamsPage;

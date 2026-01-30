@@ -7,12 +7,12 @@ import { Home } from './pages/Home';
 import './App.css';
 
 // Lazy load heavy components for better initial load time
-const Login = lazy(() => import('./pages/Login').then(m => ({ default: m.Login })));
-const Register = lazy(() => import('./pages/Register').then(m => ({ default: m.Register })));
-const ScamsPage = lazy(() => import('./pages/ScamsPage').then(m => ({ default: m.ScamsPage })));
-const ReportPage = lazy(() => import('./pages/ReportPage').then(m => ({ default: m.ReportPage })));
-const Dashboard = lazy(() => import('./pages/Dashboard').then(m => ({ default: m.Dashboard })));
-const AdminPanel = lazy(() => import('./pages/AdminPanel').then(m => ({ default: m.AdminPanel })));
+const Login = lazy(() => import('./pages/Login'));
+const Register = lazy(() => import('./pages/Register'));
+const ScamsPage = lazy(() => import('./pages/ScamsPage'));
+const ReportPage = lazy(() => import('./pages/ReportPage'));
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const AdminPanel = lazy(() => import('./pages/AdminPanel'));
 
 const LoadingFallback = () => <div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>;
 
